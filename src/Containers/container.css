@@ -1,0 +1,155 @@
+
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  div {
+    display: block;
+    width: 100%;
+  }
+}
+/*========== Normal Screens ==========*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.header {
+  width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: #354051;
+  /*background-color: #2c2c2c;*/
+  padding: 0px 10px;
+  color: white;
+  box-shadow: 0 3px 10px #888;
+}
+
+.resultsSection {
+  display: flex;
+  width: 80%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+
+.list {
+  display: flex;
+  flex-direction: column;
+  /*float: left;*/
+  width: 40%;
+  max-height: 600px;
+  margin: 0;
+}
+
+.listTitle {
+  background-color: inherit;
+}
+
+.detailsSection {
+  width: 60%;
+  background-color: yellow;
+}
+
+.searchSection{
+  width: 50%;
+  padding: 10px 2px;
+  margin: 20px auto;
+  display: block;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #aaa;
+  overflow: auto;
+}
+.footer {
+  text-align: center;
+  font-style: italic;
+  color: #c1c4cc;
+  flex-shrink: 0;
+}
+
+/*========== Small Screens ==========*/
+@media screen and (max-width: 610px){
+  body {
+    padding-top: 60px;
+  }
+  .header{
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+    left: 0; /* Posicionamos la cabecera al lado izquierdo */
+    top: 0; /* Posicionamos la cabecera pegada arriba */
+    position: absolute;
+  }
+  .searchSection{
+    width: 100%;
+    margin: 0;
+    left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	  top: 0; /* Posicionamos la cabecera pegada arriba */
+  }
+  .list{
+    max-height: none;
+    width: 100vh;
+  }
+  .detailsSection{
+    /*overflow: hidden;*/
+    width: 100%;
+  }
+  .resultsSection {
+    margin-top: 0px;
+  }
+}
+/*======== Scroll Bar Styles================*/
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+
+
+button{
+  border: .5px solid #bbb;
+  padding: 4px;
+  background-color: white;
+  color: #444;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #ccf;
+}
+
+button:focus{
+  outline:0;
+}
+
+input:focus{
+  outline: 0;
+  color: #555;
+}

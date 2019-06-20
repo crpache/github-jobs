@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+  font-family: "Montserrat", "Roboto", "varela round", sans-serif;
+  font-weight: 600;
+  height: 100vh;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+#root{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px;
+}
