@@ -37,7 +37,6 @@ const jobsReducer = (state = initialState, action) => {
         isFetching: true,
       }
     case GET_JOBS_SUCCESS:
-      console.log(action.payload.response);
       const favsIds = state.favJobs.map(job => job.id);
       const allJobs = action.payload.response.map(job => {
         if(favsIds.includes(job.id)){
@@ -82,18 +81,18 @@ const jobsReducer = (state = initialState, action) => {
       }
     case ADD_FAVORITE_JOB:
       const [fav] = state.allJobs.filter(job => job.id === action.payload.id);
-      fav.isFav = true; // C
+      fav.isFav = true;
       return {
         ...state,
-        favJobs: [...state.favJobs, fav],
+        favJobs: [...state.favJobs, fav ],
       }
     case REMOVE_FAVORITE_JOB:
-      const [fav1] = state.allJobs.filter(job => job.id === action.payload.id);
-      fav1.isFav = false;
+      const [job] = state.allJobs.filter(job => job.id === action.payload.id);
+      job.isFav = false;
       const favJobs = state.favJobs.filter(job => job.id !== action.payload.id);
       return {
         ...state,
-        favJobs: favJobs
+        favJobs,
       }
     case SELECT_JOB:
       return {
