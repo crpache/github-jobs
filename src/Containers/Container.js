@@ -57,14 +57,16 @@ class Container extends Component {
           <h1>GitHub Jobs</h1>
         </header>
 
-        <SearchBar
-          setLocation={this.props.setSearchLocation}
-          setDescription={this.props.setSearchDescription}
-          setFullTime={this.props.setSearchFullTime}
-          setInterestedTerm={this.props.setInterestedTerm}
-          searchRequest={this.props.fetchJobs}
-          search={this.props.search}
-        />
+        <div className="search-section">
+          <SearchBar
+            setLocation={this.props.setSearchLocation}
+            setDescription={this.props.setSearchDescription}
+            setFullTime={this.props.setSearchFullTime}
+            setInterestedTerm={this.props.setInterestedTerm}
+            searchRequest={this.props.fetchJobs}
+            search={this.props.search}
+          />
+        </div>
 
         <div className="resultsSection">
           <div className="list col-4">
@@ -92,7 +94,7 @@ class Container extends Component {
           </div>
         </div>
         
-        {jobDetailsModal}
+        { jobDetailsModal }
 
       </div>
     )

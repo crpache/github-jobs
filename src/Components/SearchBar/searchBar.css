@@ -1,13 +1,15 @@
-.searchSection{
-  background-color: #fff;
-}
-.searchFields{
+.searchBar{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
   width: 90%;
+  height: 100%;
   margin: 0 auto;
   background-color: inherit;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #aaa;
+  overflow: auto;
 }
 
 .searchButton{
@@ -27,7 +29,7 @@
 }
 
 .inputField{
-  margin: 10px 10px 10px 3px;
+  margin: 0 10px 0 5px;
   border: none;
   background-color: #e6dcdcad;
   padding: 5px;
@@ -39,7 +41,7 @@
   transition: all .3s;
 }
 
-@media screen and (max-width: 2000px){
+@media screen and (max-width: 2900px){
   .searchFields{
     text-align: center;
     box-sizing: border-box;

@@ -19,8 +19,7 @@ const SearchBar = props => {
   }
 
   return (
-    <div className="searchSection">
-      <div className="searchFields">
+      <div className="searchBar">
         <input
           className="inputField"
           name="location"
@@ -49,7 +48,7 @@ const SearchBar = props => {
           placeholder="Interested Term"
         />
         <label className="labelField">
-          Full time
+          Full Time
           <input
             name="isFullTime"
             type="checkbox"
@@ -65,7 +64,6 @@ const SearchBar = props => {
           onClick={() => props.searchRequest(props.search)}
         />
       </div>
-    </div>
   )
 }
 
